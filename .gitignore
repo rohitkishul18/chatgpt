@@ -1,4 +1,7 @@
  
 node_modules/
 backend/node_modules/
+frontEnd-Angular/node_modules/
+.angular
 .env
+.vscode

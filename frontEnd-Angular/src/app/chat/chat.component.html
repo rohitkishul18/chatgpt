@@ -1,0 +1,20 @@
+<div  class="header">
+  <h1>Chat with openAI</h1>
+  <p>Ask me anything!</p>
+</div>
+<div class="chat-container">
+  <div class="chat-box">
+    <div *ngFor="let msg of messages" [ngClass]="msg.role">
+      <div class="message">
+        <strong>{{ msg.role === 'user' ? 'You' : 'BOT' }}</strong>
+        <p>{{ msg.content }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="input-box">
+    <input [(ngModel)]="userInput" placeholder="Send a message" />
+    <button (click)="sendMessage()">➤</button>
+    <button class="mic-btn" (click)="startVoiceRecognition()">🎙️</button>
+  </div>
+</div>
